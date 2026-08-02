@@ -2406,3 +2406,41 @@ footer {
     margin-top: 24px;
   }
 }
+.contact-success {
+  padding: clamp(50px, 9vw, 90px) 20px;
+  text-align: center;
+}
+
+.contact-success__mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  margin-bottom: 26px;
+  border: 1px solid rgba(79, 45, 57, 0.22);
+  border-radius: 50%;
+  color: #4f2d39;
+  font-size: 1.8rem;
+}
+
+.contact-success h3 {
+  margin: 0 0 16px;
+  color: #241a18;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.3rem, 6vw, 4rem);
+  font-weight: 400;
+}
+
+.contact-success p {
+  max-width: 480px;
+  margin: 0 auto;
+  color: #5f4a43;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}

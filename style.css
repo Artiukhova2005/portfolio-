@@ -2268,4 +2268,131 @@ footer {
     transform: none !important;
   }
 }
+/* CONTACT FORM */
+
+.contact-form{
+
+margin-top:60px;
+
+}
+
+.form-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,minmax(0,1fr));
+
+gap:24px;
+
+}
+
+.field{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+.field label{
+
+margin-bottom:10px;
+
+font-size:.78rem;
+
+letter-spacing:.12em;
+
+text-transform:uppercase;
+
+opacity:.7;
+
+}
+
+.field input,
+.field select,
+.field textarea{
+
+width:100%;
+
+padding:18px 20px;
+
+border:1px solid rgba(0,0,0,.12);
+
+border-radius:20px;
+
+background:#fff;
+
+font:inherit;
+
+transition:.25s;
+
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+
+outline:none;
+
+border-color:#4f2d39;
+
+box-shadow:0 0 0 4px rgba(79,45,57,.08);
+
+}
+
+.field textarea{
+
+resize:vertical;
+
+min-height:180px;
+
+}
+
+.field-full{
+
+margin-top:24px;
+
+}
+
+.submit-btn{
+
+margin-top:34px;
+
+padding:18px 34px;
+
+border:none;
+
+border-radius:999px;
+
+background:#4f2d39;
+
+color:#fff;
+
+font-size:1rem;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.25s;
+
+}
+
+.submit-btn:hover{
+
+transform:translateY(-2px);
+
+opacity:.92;
+
+}
+
+@media(max-width:768px){
+
+.form-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
 

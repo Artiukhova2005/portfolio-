@@ -345,20 +345,118 @@
       </div>
     </section>
 
-    <section id="contact" class="contact-section reveal">
-      <p data-en="Have a project in mind?" data-de="Sie haben ein Projekt im Kopf?">Have a project in mind?</p>
-      <h2 data-en="Let’s create something worth remembering." data-de="Lassen Sie uns etwas schaffen, das in Erinnerung bleibt.">Let’s create something worth remembering.</h2>
-      <div class="contact-actions">
-        <a class="button button-light" href="https://wa.me/4368110832732" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="button button-outline-light" href="https://t.me/+4368110832732" target="_blank" rel="noopener">Telegram</a>
-      </div>
-      <div class="contact-details">
-        <span>Anastasiia Artiukhova</span>
-        <a href="tel:+4368110832732">+43 681 108 327 32</a>
-        <span>Vienna, Austria</span>
-      </div>
-    </section>
-  </main>
+  <form
+  action="https://formspree.io/f/mbdnvqwd"
+  method="POST"
+  class="contact-form"
+>
+
+  <div class="form-grid">
+
+    <div class="field">
+      <label>Your name *</label>
+      <input
+        type="text"
+        name="name"
+        placeholder="John Smith"
+        required
+      >
+    </div>
+
+    <div class="field">
+      <label>Email *</label>
+      <input
+        type="email"
+        name="email"
+        placeholder="john@email.com"
+        required
+      >
+    </div>
+
+    <div class="field">
+      <label>Business name</label>
+      <input
+        type="text"
+        name="company"
+        placeholder="Your company"
+      >
+    </div>
+
+    <div class="field">
+      <label>Project type</label>
+      <select name="project_type">
+
+        <option>Landing page</option>
+
+        <option>Business website</option>
+
+        <option>Website redesign</option>
+
+        <option>Portfolio</option>
+
+        <option>Other</option>
+
+      </select>
+    </div>
+
+    <div class="field">
+      <label>Budget</label>
+
+      <select name="budget">
+
+        <option>€500–1000</option>
+
+        <option>€1000–2500</option>
+
+        <option>€2500–5000</option>
+
+        <option>€5000+</option>
+
+        <option>Not sure yet</option>
+
+      </select>
+    </div>
+
+    <div class="field">
+      <label>Timeline</label>
+
+      <select name="timeline">
+
+        <option>ASAP</option>
+
+        <option>Within 1 month</option>
+
+        <option>1–3 months</option>
+
+        <option>Flexible</option>
+
+      </select>
+
+    </div>
+
+  </div>
+
+  <div class="field field-full">
+
+    <label>Tell me about your project *</label>
+
+    <textarea
+      name="message"
+      rows="7"
+      placeholder="Describe your project, goals, style preferences and anything important..."
+      required
+    ></textarea>
+
+  </div>
+
+  <button
+    class="submit-btn"
+    type="submit"
+  >
+    Let's build it →
+  </button>
+
+</form>
 
   <footer>
     <span>© 2026 Anastasiia Artiukhova</span>

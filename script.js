@@ -93,3 +93,46 @@ document.addEventListener("DOMContentLoaded", () => {
     root.classList.add("hero-loaded");
   });
 });
+const contactForm = document.querySelector("#contact-form");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const submitButton = contactForm.querySelector(".submit-btn");
+    const originalButtonText = submitButton.textContent;
+
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending...";
+
+    try {
+      const formData = new FormData(contactForm);
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || "Form submission failed");
+      }
+
+      contactForm.innerHTML = `
+        <div class="contact-success">
+          <span class="contact-success__mark">✓</span>
+          <h3>Thank you.</h3>
+          <p>Your enquiry has been sent successfully. I’ll get back to you shortly.</p>
+        </div>
+      `;
+    } catch (error) {
+      submitButton.disabled = false;
+      submitButton.textContent = originalButtonText;
+
+      alert("Something went wrong. Please try again.");
+      console.error(error);
+    }
+  });
+}
+

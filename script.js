@@ -135,4 +135,58 @@ if (contactForm) {
     }
   });
 }
+// Cookie consent + Google Analytics
+
+const cookieBanner = document.getElementById("cookie-banner");
+const cookieAccept = document.getElementById("cookie-accept");
+const cookieReject = document.getElementById("cookie-reject");
+
+function loadGoogleAnalytics() {
+  if (document.querySelector('script[data-google-analytics]')) {
+    return;
+  }
+
+  window.dataLayer = window.dataLayer || [];
+
+  window.gtag = function () {
+    dataLayer.push(arguments);
+  };
+
+  gtag("js", new Date());
+  gtag("config", "G-DL6DNPFMEH");
+
+  const googleScript = document.createElement("script");
+  googleScript.async = true;
+  googleScript.src =
+    "https://www.googletagmanager.com/gtag/js?id=G-DL6DNPFMEH";
+
+  googleScript.setAttribute("data-google-analytics", "true");
+
+  document.head.appendChild(googleScript);
+}
+
+const cookieChoice = localStorage.getItem("analytics-consent");
+
+if (cookieChoice === "accepted") {
+  cookieBanner.style.display = "none";
+  loadGoogleAnalytics();
+}
+
+if (cookieChoice === "rejected") {
+  cookieBanner.style.display = "none";
+}
+
+cookieAccept.addEventListener("click", function () {
+  localStorage.setItem("analytics-consent", "accepted");
+
+  cookieBanner.style.display = "none";
+
+  loadGoogleAnalytics();
+});
+
+cookieReject.addEventListener("click", function () {
+  localStorage.setItem("analytics-consent", "rejected");
+
+  cookieBanner.style.display = "none";
+});
 

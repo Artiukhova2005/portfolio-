@@ -2530,3 +2530,24 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+.contact-card footer,
+footer {
+  background: transparent !important;
+  color: #806c64 !important;
+  border-top: 1px solid rgba(79, 45, 57, 0.14) !important;
+  padding: 28px 0 8px !important;
+  margin-top: 36px !important;
+  box-shadow: none !important;
+}
+
+.contact-card footer span,
+.contact-card footer a,
+footer span,
+footer a {
+  color: #806c64 !important;
+}
+
+.contact-card footer a,
+footer a {
+  text-decoration: none !important;
+}
